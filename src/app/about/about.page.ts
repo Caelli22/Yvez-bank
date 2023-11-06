@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
+  public student :any = [
+    {
+      name : "",
+      age : "",
+      gender : ""
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

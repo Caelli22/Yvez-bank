@@ -1,0 +1,7 @@
+{
+  "name": "icoco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

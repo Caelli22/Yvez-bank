@@ -2,6 +2,7 @@
     font-family: futura;
     src: url(../../assets/font/FuturaLT.woff);
 }
+
 //Background
 .trans-bg{
     --ion-background-color: rgb(30,30,30) !important;
@@ -18,15 +19,20 @@
 
 // Top Panels
 
-.img-arrow{
-        height: 23px;
-        width: 23px;
+.container-trans-select {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
 }
 
-.trans-select-grid{
-    padding-top: 40px;
-    padding-left: 60px;
+.img-arrow{
+    max-height: 23px;
+    max-width: 23px;
 }
+
 .trans-qr{
     height: 28px;
     width: 28px;
@@ -38,13 +44,16 @@
     font-weight: bold;
 }
 
-.trans-option-grid{
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
 // Yvez Button
 
+.btn-option-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+}
 .yvez-btn{
     --background: rgb(64,64,64);
     font-family: futura;
@@ -64,9 +73,7 @@
     font-weight: bold;
 }
 #txt-bank{
-    position: absolute;
     padding-top: 20px;
-    padding-left: 75px;
     font-weight: bold;
 }
 
@@ -86,5 +93,43 @@
 #txt-other-bank{
     position: relative;
     padding-left: 10px;
-    font-weight: bold;
+}
+
+// Send & Invite Button
+
+.send-inv-card{
+    --background: rgb(64,64,64);
+    font-family: futura;
+    height: 78px;
+}
+.txt-invite{
+    position: relative;
+    padding-top: 4px;
+    color: white;
+}
+.div-send-title{
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.db-arrow{
+    position: relative;
+    height: 26px;
+    width: 26px;
+}
+.new-logo{
+    position: relative;
+    height: 18px;
+    width: 44px;   
+}
+.send-card-content{
+    display: flex;
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+.txt-money{
+    color: white;
+    font-size: 12px;
 }

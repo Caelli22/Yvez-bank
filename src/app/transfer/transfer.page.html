@@ -5,26 +5,61 @@
         </div>
     
     <!--send & transfer-->    
-    <ion-grid class="trans-select-grid">
-        <ion-row>
-          <ion-col size="3" ><ion-img class="img-arrow" src ="../../assets/transfer-icons/right-arrow.png"></ion-img></ion-col>
-          <ion-col size = "6" class="txt-send">Send & Transfer</ion-col>
-          <ion-col size="3" ><ion-img class="trans-qr" src ="../../assets/transfer-icons/trans-qr.png"></ion-img></ion-col>
-        </ion-row>
-      </ion-grid>
+
+    <div class="container-trans-select">
+        <div> <img class="img-arrow" src="../../assets/transfer-icons/right-arrow.png" alt="arrow"></div>
+        <div> <p class="txt-send">Send & Transfer</p> </div>
+        <div><img class="trans-qr" src="../../assets/transfer-icons/trans-qr.png" alt="qr-code"></div>
+    </div>
 
      <!--Button Option 1 & 2--> 
 
-     <ion-grid class="trans-option-grid">
+     <div class="btn-option-container">
+        <div>
+            <ion-button class="yvez-btn">
+                <ion-img class="yvez-logo" src="../../assets/transfer-icons/yvez_btn/yvez_logo.png"></ion-img>
+                <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p>
+            </ion-button>
+        </div>
+        <div>
+            <ion-button class="other-bank-btn">
+                <ion-img class="other_bank_logo" src="../../assets/transfer-icons/yvez_btn/bank_logo.png"></ion-img>
+            <p id="txt-other-bank">Other Banks</p>
+            </ion-button>
+        </div>
+     </div>
+
+       <!--Card Send & Invite--> 
+
+       <ion-card class="send-inv-card">
+            <div class="div-send-title"> 
+                <ion-grid>
+                <ion-row>
+                    <ion-col size="auto">
+                        <ion-img class="db-arrow" src="../../assets/transfer-icons/db_arrow.png"></ion-img>       
+                    </ion-col>
+
+                    <ion-col size="auto">
+                    <div class="txt-invite"><ion-text>Send & Invite</ion-text> </div> 
+                    </ion-col>
+
+                    <ion-col size="auto">
+                        <ion-img class="new-logo" src="../../assets/transfer-icons/new.png"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="send-card-content">
+                <p class="txt-money">Send money to your phone contacts, they’ll get it after opening an account.</p>
+              </div>
+            </div>
+       </ion-card>
+
+      <!-- <ion-grid class="trans-option-grid">
         <ion-row>
-          <ion-col size="6"><ion-button class="yvez-btn">
+          <ion-col size="12"><ion-button class="send-inv-btn">
             <ion-img class="yvez-logo" src="../../assets/transfer-icons/yvez_btn/yvez_logo.png"></ion-img>
-            <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p></ion-button></ion-col>
-          <ion-col size="6">
-            <ion-button class="other-bank-btn"><ion-img class="other_bank_logo" src="../../assets/transfer-icons/yvez_btn/bank_logo.png"></ion-img>
-            <p id="txt-other-bank">Other Banks</p></ion-button>
-        </ion-col>
+            <p>Send money to your phone contacts, they’ll get it after opening an account.</p></ion-button></ion-col>
         </ion-row>
-      </ion-grid>
-     
+      </ion-grid> -->
+       
 </ion-content>

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: futura;
+    src: url(../../assets/font/FuturaLT.woff);
+}
+//Background
+.trans-bg{
+    --ion-background-color: rgb(30,30,30) !important;
+}
+.pattern-circle{
+    position: absolute;
+    right: -220px;
+    bottom: 15px;
+    .img-patt{
+        height: 881px;
+        width: 869px;
+    }
+}
+
+// Top Panels
+
+.img-arrow{
+        height: 23px;
+        width: 23px;
+}
+
+.trans-select-grid{
+    padding-top: 40px;
+    padding-left: 60px;
+}
+.trans-qr{
+    height: 28px;
+    width: 28px;
+}
+
+.txt-send{
+    font-family: futura;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.trans-option-grid{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+// Yvez Button
+
+.yvez-btn{
+    --background: rgb(64,64,64);
+    font-family: futura;
+    width: 168px;
+    height: 74px;
+}
+.yvez-logo{
+    position: relative;
+    height: 48px;
+    width: 34px;
+}
+#txt-yvez{
+    position: relative;
+    font-size: 24px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+#txt-bank{
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 75px;
+    font-weight: bold;
+}
+
+// Other Bank Button
+
+.other-bank-btn{
+    --background: rgb(64,64,64);
+    font-family: futura;
+    width: 168px;
+    height: 74px;
+}
+.other_bank_logo{
+    position: relative;
+    height: 28px;
+    width: 28px;
+}
+#txt-other-bank{
+    position: relative;
+    padding-left: 10px;
+    font-weight: bold;
+}

@@ -10,9 +10,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'sample',
-    loadChildren: () => import('./sample/sample.module').then( m => m.SamplePageModule)
   },
   {
     path: 'login',
@@ -21,6 +18,10 @@ const routes: Routes = [
   {
     path: 'transfer',
     loadChildren: () => import('./transfer/transfer.module').then( m => m.TransferPageModule)
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
 
 ];

@@ -13,6 +13,6 @@ export class HomePage {
   @HostListener('document:click', ['$event'])
   handleClick(event: MouseEvent): void {
     // Navigate to the next page when the document is clicked
-    this.router.navigate(['/sample']);
+    this.router.navigate(['/main']);
   }
 }

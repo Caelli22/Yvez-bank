@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'transfer',
+    loadChildren: () => import('./transfer/transfer.module').then( m => m.TransferPageModule)
+  },
 
 ];
 

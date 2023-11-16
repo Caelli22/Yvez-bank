@@ -133,3 +133,28 @@
     color: white;
     font-size: 12px;
 }
+
+// List of Transaction
+
+.list-friend{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    height: 35em;
+    width: 100%;
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+}
+
+.txt-area-search{
+    padding-top: px;
+    padding-left: 20px;
+    --background: rgb(230,223,241);
+    --color: rgb(6, 6, 6);
+    --border-radius: 46px;
+}
+.ion-item-clr{
+    --background: rgb(255, 255, 255);
+    border-style: unset !important;
+}

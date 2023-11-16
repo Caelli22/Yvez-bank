@@ -121,6 +121,7 @@ ion-icon {
     text-align: center;
     color: #000;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
   
 .item3:nth-child(1) {
@@ -151,3 +152,82 @@ ion-icon {
 }
 
 
+ion-card {
+    background-color: white;
+    border-radius: 20px;
+}
+
+ion-card-title, ion-card-subtitle {
+    color: #000;
+    margin-left: 20px;
+}
+
+ion-label {
+    font-weight: bold;
+    color: #000;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-card-content {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.ccnum {
+    margin-top: 20px;
+    width: 230px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 15.5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.svv {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.expiration, .cvv {
+    margin-top: 20px;
+    width: 74px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 15.5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cc-content {
+    margin-left: 20px;
+}
+
+
+.cvv-dot {
+    margin-top: 14px;
+    margin-left: 15px;
+    margin-bottom: 20px; 
+}
+
+.exp-dot {
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.cc {
+    background: url('../../assets/cc.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.cc-title {
+    font-weight: bold;
+}

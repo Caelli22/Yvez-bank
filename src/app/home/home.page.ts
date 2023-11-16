@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+  @HostListener('document:click', ['$event'])
+  handleClick(event: MouseEvent): void {
+    // Navigate to the next page when the document is clicked
+    this.router.navigate(['/sample']);
+  }
 }

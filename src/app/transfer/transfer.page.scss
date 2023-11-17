@@ -3,6 +3,13 @@
     src: url(../../assets/font/FuturaLT.woff);
 }
 
+// Customization of placeholder
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
 //Background
 .trans-bg{
     --ion-background-color: rgb(30,30,30) !important;
@@ -138,7 +145,6 @@
 
 .list-friend{
     display: flex;
-    position: absolute;
     overflow: hidden;
     background-color: #FFFFFF;
     height: 35em;
@@ -147,14 +153,43 @@
     border-top-right-radius: 42px;
 }
 
-.txt-area-search{
-    padding-top: px;
-    padding-left: 20px;
-    --background: rgb(230,223,241);
-    --color: rgb(6, 6, 6);
-    --border-radius: 46px;
+.block
+{
+  z-index: 2;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 30px;   
 }
-.ion-item-clr{
-    --background: rgb(255, 255, 255);
-    border-style: unset !important;
+.input-res
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 44px;
+  font-family: futura;
+  background-color: #ddd;
+  border: none;
+  padding-left: 45px;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  background-color: rgb(230,223,241);
+  color: rgb(6, 6, 6);
+  border-radius: 46px;
+  border: unset;
 }
+
+.input-col{
+    width: 100%;
+}
+.img-srch{
+    margin: 10px -13px -33px 0 !important;
+    background-color: transparent;
+    font-size: 27px;
+    padding: 0px 20px;
+    z-index: 5 ;   
+}
+

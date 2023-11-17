@@ -1,0 +1,164 @@
+<ion-content>
+  <div class="flex-container">
+    <div class="flex-items">
+      <ion-icon name="person-outline" size="large" ></ion-icon>
+    </div>
+    <div class="flex-items">
+      <img src="../../assets/logo.png">
+    </div>
+    <div class="flex-items">
+      <ion-icon name="help-circle-outline" size="large"></ion-icon>
+    </div>
+ </div>
+
+ <div class="container">
+  <div class="item">
+    My account
+  </div>
+  <div class="item">
+    <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+  </div>
+ </div>
+
+ <div class="container2">
+  <div class="item2">
+    ₱
+  </div>
+  <div class="item2">
+    99999
+  </div>
+ </div>
+
+ <div class="container3">
+   <div class="items3">
+    <img src="../../assets/deposit.png" alt=""><br>
+    Deposit
+   </div>
+   <div class="items3">
+    <img src="../../assets/transfer.png" alt=""><br>
+    Transfer
+   </div>
+   <div class="items3">
+    <img src="../../assets/qr.png" alt=""> <br>
+    QR
+   </div>
+ </div>
+
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Yvez Rewards Points
+    </ion-card-title>
+    <ion-card-subtitle>
+      your total points is: {{100}}
+    </ion-card-subtitle>
+  </ion-card-header>
+ </ion-card>
+
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Boss Yvez Accounts
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="center">
+          <ion-icon name="card-outline" size="large"></ion-icon>&nbsp;Elijah
+        </ion-col>
+        <ion-col class="center">
+          <ion-icon name="card-outline" size="large"></ion-icon>&nbsp;Ico
+        </ion-col>
+        <ion-col class="center">
+          <ion-icon name="card-outline" size="large"></ion-icon>&nbsp;Kevin
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+ </ion-card>
+
+ <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-chip>
+            <ion-icon name="cart-outline" size="large"></ion-icon>
+            <ion-label>BUY LOAD</ion-label>
+          </ion-chip>
+        </ion-card-header>
+       </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-chip>
+            <ion-icon name="cart-outline" size="large"></ion-icon>
+            <ion-label>PAY BILLS</ion-label>
+          </ion-chip>
+        </ion-card-header>
+       </ion-card>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+
+ <ion-card class="cc">
+  <ion-card-header>
+    <ion-card-title class="cc-title">
+      Debit Card
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="cc-content">
+    Card Number
+    <div class="ccnum">
+      <svg class="svv" xmlns="http://www.w3.org/2000/svg" width="185" height="5" viewBox="0 0 185 5" fill="none">
+        <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="52.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="102.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="152.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="12.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="62.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="112.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="162.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="22.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="72.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="122.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="172.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="32.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="82.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="132.5" cy="2.5" r="2.5" fill="black"/>
+        <circle cx="182.5" cy="2.5" r="2.5" fill="black"/>
+      </svg>
+    </div>
+    <br>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          Expires
+          <div class="expiration">
+            <svg class="exp-dot" xmlns="http://www.w3.org/2000/svg" width="41" height="16" viewBox="0 0 41 16" fill="none">
+              <circle cx="2.5" cy="8.5" r="2.5" fill="black"/>
+              <circle cx="12.5" cy="8.5" r="2.5" fill="black"/>
+              <circle cx="28.5" cy="8.5" r="2.5" fill="black"/>
+              <circle cx="38.5" cy="8.5" r="2.5" fill="black"/>
+              <path d="M24 1L18 15" stroke="black" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </ion-col>
+        <ion-col>
+          Cvv
+          <div class="cvv">
+            <svg class="cvv-dot" xmlns="http://www.w3.org/2000/svg" width="25" height="5" viewBox="0 0 25 5" fill="none">
+              <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+              <circle cx="12.5" cy="2.5" r="2.5" fill="black"/>
+              <circle cx="22.5" cy="2.5" r="2.5" fill="black"/>
+            </svg>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+ </ion-card>
+
+</ion-content>

@@ -30,18 +30,24 @@
  </div>
 
  <div class="container3">
-   <div class="items3">
-    <img src="../../assets/deposit.png" alt=""><br>
-    Deposit
-   </div>
-   <div class="items3">
+  <ion-button fill="clear" color="light">
+    <div class="items3">
+      <img src="../../assets/deposit.png" alt=""><br>
+      Deposit
+     </div>
+  </ion-button>
+  <ion-button fill="clear" color="light">
+    <div class="items3">
     <img src="../../assets/transfer.png" alt=""><br>
     Transfer
    </div>
-   <div class="items3">
+  </ion-button>
+  <ion-button fill="clear" color="light">
+    <div class="items3">
     <img src="../../assets/qr.png" alt=""> <br>
-    QR
+    Use QR
    </div>
+  </ion-button> 
  </div>
 
  <ion-card>
@@ -79,26 +85,18 @@
  </ion-card>
 
  <ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card>
-        <ion-card-header>
-          <ion-chip>
-            <ion-icon name="cart-outline" size="large"></ion-icon>
-            <ion-label>BUY LOAD</ion-label>
-          </ion-chip>
-        </ion-card-header>
-       </ion-card>
+  <ion-row class="btn">
+    <ion-col class="ion-text-center">
+      <ion-button shape="round" size="small" color="dark">
+        <ion-icon name="cart-outline" size="large"></ion-icon>
+        &nbsp;Buy Load
+      </ion-button>
     </ion-col>
-    <ion-col>
-      <ion-card>
-        <ion-card-header>
-          <ion-chip>
-            <ion-icon name="cart-outline" size="large"></ion-icon>
-            <ion-label>PAY BILLS</ion-label>
-          </ion-chip>
-        </ion-card-header>
-       </ion-card>
+    <ion-col class="ion-text-center">
+      <ion-button shape="round" size="small" color="dark">
+        <ion-icon name="receipt-outline" size="large"></ion-icon>
+      &nbsp;Pay Bills
+    </ion-button>
     </ion-col>
   </ion-row>
  </ion-grid>
@@ -160,5 +158,4 @@
     </ion-grid>
   </ion-card-content>
  </ion-card>
-
 </ion-content>

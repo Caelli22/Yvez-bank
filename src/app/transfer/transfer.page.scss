@@ -59,13 +59,14 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 1rem;
+    padding: 0px 20px 0px 20px;
 }
 .yvez-btn{
     --background: rgb(64,64,64);
     font-family: futura;
     width: 168px;
     height: 74px;
+    flex-shrink: 0;
 }
 .yvez-logo{
     position: relative;
@@ -91,6 +92,7 @@
     font-family: futura;
     width: 168px;
     height: 74px;
+    flex-shrink: 0;
 }
 .other_bank_logo{
     position: relative;
@@ -193,3 +195,88 @@
     z-index: 5 ;   
 }
 
+.save-profile{
+    z-index: 2;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0px;   
+}
+
+.img-circol{
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+#initials{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.init-container{
+    position: relative;
+    text-align: center;
+}
+
+#save-name{
+    width: 114px;
+    height: 17px;
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-overflow: ellipsis; /* enables ellipsis */
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden; /* keeps the element from overflowing its parent */
+}
+.name-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#save-bank{
+    position: absolute;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    bottom: 15px;
+    left: 70px;
+}
+.bank-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#save-date{
+    color: #1E1E1E;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 290px;
+    bottom: 30px;
+}
+.date-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}

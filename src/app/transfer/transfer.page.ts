@@ -27,17 +27,17 @@ export class TransferPage implements OnInit {
       initials: "DB",
       paymethod: "GoTyme",
       date: "Nov 07, 2023"},
-      
-    { name: "Yvez Santiago", 
-      initials: "Yv",
-      paymethod: "Maya",
-      date: "Nov 08, 2023"}
-  ];
 
+    { name: "Yvez Santiago", 
+    initials: "YV",
+    paymethod: "Maya",
+    date: "Nov 08, 2023"}
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

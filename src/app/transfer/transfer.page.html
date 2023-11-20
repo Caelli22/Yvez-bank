@@ -72,14 +72,30 @@
                             <img class="img-circol" src="../../assets/transfer-icons/circol.png" alt="circol">  
                         </div>
 
-                        <div class="name-container">
-                            <h1 id="save-name">{{prof.name}}</h1>
-                        </div>
-                        <div class="bank-container">
-                            <h1 id="save-bank">{{prof.paymethod}}</h1>
-                        </div>
-                        <div class="date-container">
-                            <h1 id="save-date">{{prof.date}}</h1>
+                        <div class="slot-container">
+                            
+                            <ion-grid fixed>
+                                <ion-row>
+                                    <ion-col class="name-container" size="6"><h1 id="save-name">{{prof.name}}</h1></ion-col>
+                                    <ion-col class="date-container" size="6"><h1 id="save-date">{{prof.date}}</h1></ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col size="12" class="bank-container" ><h1 id="save-bank">{{prof.paymethod}}</h1></ion-col>
+                                </ion-row>
+                            </ion-grid>
+    
+                            <!-- <div class="name-container">
+                                <h1 id="save-name">{{prof.name}}</h1>
+                            </div>
+                            
+                            <div class="date-container">
+                                <h1 id="save-date">{{prof.date}}asfasfsa</h1>
+                            </div>
+
+                            <div class="bank-container">
+                                <h1 id="save-bank">{{prof.paymethod}}</h1>
+                            </div> -->
+
                         </div>
                     </div>
                 </div> 

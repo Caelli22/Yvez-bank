@@ -3,6 +3,13 @@
     src: url(../../assets/font/FuturaLT.woff);
 }
 
+// Customization of placeholder
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
 //Background
 .trans-bg{
     --ion-background-color: rgb(30,30,30) !important;
@@ -52,13 +59,14 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 1rem;
+    padding: 0px 20px 0px 20px;
 }
 .yvez-btn{
     --background: rgb(64,64,64);
     font-family: futura;
     width: 168px;
     height: 74px;
+    flex-shrink: 0;
 }
 .yvez-logo{
     position: relative;
@@ -84,6 +92,7 @@
     font-family: futura;
     width: 168px;
     height: 74px;
+    flex-shrink: 0;
 }
 .other_bank_logo{
     position: relative;
@@ -138,7 +147,6 @@
 
 .list-friend{
     display: flex;
-    position: absolute;
     overflow: hidden;
     background-color: #FFFFFF;
     height: 35em;
@@ -147,14 +155,128 @@
     border-top-right-radius: 42px;
 }
 
-.txt-area-search{
-    padding-top: px;
-    padding-left: 20px;
-    --background: rgb(230,223,241);
-    --color: rgb(6, 6, 6);
-    --border-radius: 46px;
+.block
+{
+  z-index: 2;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 30px;   
 }
-.ion-item-clr{
-    --background: rgb(255, 255, 255);
-    border-style: unset !important;
+.input-res
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 44px;
+  font-family: futura;
+  background-color: #ddd;
+  border: none;
+  padding-left: 45px;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  background-color: rgb(230,223,241);
+  color: rgb(6, 6, 6);
+  border-radius: 46px;
+  border: unset;
+}
+
+.input-col{
+    width: 100%;
+}
+.img-srch{
+    margin: 10px -13px -33px 0 !important;
+    background-color: transparent;
+    font-size: 27px;
+    padding: 0px 20px;
+    z-index: 5 ;   
+}
+
+.save-profile{
+    z-index: 2;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0px;   
+}
+
+.img-circol{
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+#initials{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.init-container{
+    position: relative;
+    text-align: center;
+}
+
+#save-name{
+    width: 114px;
+    height: 17px;
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-overflow: ellipsis; /* enables ellipsis */
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden; /* keeps the element from overflowing its parent */
+}
+.name-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#save-bank{
+    position: absolute;
+    color: #1E1E1E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    bottom: 15px;
+    left: 70px;
+}
+.bank-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#save-date{
+    color: #1E1E1E;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 290px;
+    bottom: 30px;
+}
+.date-container{
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
 }

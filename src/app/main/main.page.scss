@@ -240,3 +240,17 @@ ion-button {
     margin-left: 40px;
     margin-right: 40px;
 }
+
+h1 {
+    margin-left: 30px;
+    color: black;
+}
+
+@font-face {
+    font-family: futura;
+    src: url(../../assets/font/FuturaLT.woff);
+}
+
+* {
+    font-family: futura;
+}

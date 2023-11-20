@@ -197,31 +197,43 @@
 
 .save-profile{
     z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin: 0 auto;
     width: 100%;
     padding: 20px 0px;   
 }
 
-.img-circol{
-    width: 54px;
-    height: 54px;
-    flex-shrink: 0;
-}
-
 #initials{
     position: absolute;
-    bottom: 10px;
-    left: 15px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #1E1E1E;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    z-index: 3;
+}
+.initials-placement{
+    display: flex;
+    position: relative;
+    right: 50px;
+    bottom: 5px;
+    width: 54px;
+    height: 54px; 
+}
+.img-circol{
+    width: 100%;
+    position: relative;
+    float: left;
 }
 
-.init-container{
+.prof-container{
     position: relative;
+    padding: 10px 0px 20px 50px;
     text-align: center;
 }
 
@@ -229,7 +241,7 @@
     width: 114px;
     height: 17px;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: 70px;
     color: #1E1E1E;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -255,7 +267,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    bottom: 15px;
+    bottom: 35px;
     left: 70px;
 }
 .bank-container{
@@ -272,8 +284,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    left: 290px;
-    bottom: 30px;
+    left: 230px;
+    bottom: 50px;
 }
 .date-container{
     text-align: center;

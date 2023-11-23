@@ -58,22 +58,44 @@
        
       
       <div class="list-friend">
-        <div class="block">
-            <img class="img-srch" src="../../assets/transfer-icons/search.png" alt="">
+
+        <div class="block" >
+            <img class="img-srch" src="../../assets/transfer-icons/search.png" alt="srch">
             <input type="text" placeholder="Search" class="input-res">
 
                 <div class="save-profile">
-                    <img class="img-circol" src="../../assets/transfer-icons/circol.png" alt="circol">
-                    <div class="init-container">
-                        <h1 id="initials">EJ</h1>
-                        <div class="name-container">
-                            <h1 id="save-name">Elijah Joshua A. Dimaculangan</h1>
+
+                    <div class="prof-container" *ngFor="let prof of profile">
+
+                        <div class="initials-placement">
+                            <h1 id="initials">{{prof.initials}}</h1>
+                            <img class="img-circol" src="../../assets/transfer-icons/circol.png" alt="circol">  
                         </div>
-                        <div class="bank-container">
-                            <h1 id="save-bank">G-Xchange</h1>
-                        </div>
-                        <div class="date-container">
-                            <h1 id="save-date">Nov 03,2023</h1>
+
+                        <div class="slot-container">
+                            
+                            <ion-grid fixed>
+                                <ion-row>
+                                    <ion-col class="name-container" size="6"><h1 id="save-name">{{prof.name}}</h1></ion-col>
+                                    <ion-col class="date-container" size="6"><h1 id="save-date">{{prof.date}}</h1></ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col size="12" class="bank-container" ><h1 id="save-bank">{{prof.paymethod}}</h1></ion-col>
+                                </ion-row>
+                            </ion-grid>
+    
+                            <!-- <div class="name-container">
+                                <h1 id="save-name">{{prof.name}}</h1>
+                            </div>
+                            
+                            <div class="date-container">
+                                <h1 id="save-date">{{prof.date}}asfasfsa</h1>
+                            </div>
+
+                            <div class="bank-container">
+                                <h1 id="save-bank">{{prof.paymethod}}</h1>
+                            </div> -->
+
                         </div>
                     </div>
                 </div> 

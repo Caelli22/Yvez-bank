@@ -15,18 +15,26 @@
      <!--Button Option 1 & 2--> 
 
      <div class="btn-option-container">
-        <div>
-            <ion-button class="yvez-btn">
-                <ion-img class="yvez-logo" src="../../assets/transfer-icons/yvez_btn/yvez_logo.png"></ion-img>
-                <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p>
-            </ion-button>
-        </div>
-        <div>
-            <ion-button class="other-bank-btn">
-                <ion-img class="other_bank_logo" src="../../assets/transfer-icons/yvez_btn/bank_logo.png"></ion-img>
-            <p id="txt-other-bank">Other Banks</p>
-            </ion-button>
-        </div>
+        <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                    <div class="btn-1">
+                        <ion-button class="yvez-btn">
+                            <ion-img class="yvez-logo" src="../../assets/transfer-icons/yvez_btn/yvez_logo.png"></ion-img>
+                            <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p>
+                        </ion-button>
+                    </div>
+                </ion-col>
+              <ion-col size="6">
+                    <div class="btn-2">
+                        <ion-button class="other-bank-btn">
+                            <ion-img class="other_bank_logo" src="../../assets/transfer-icons/yvez_btn/bank_logo.png"></ion-img>
+                        <p id="txt-other-bank">Other Banks</p>
+                        </ion-button>
+                    </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
      </div>
 
        <!--Card Send & Invite--> 
@@ -56,7 +64,6 @@
 
       <!--List of Transaction-->
        
-      
       <div class="list-friend">
 
         <div class="block" >
@@ -101,8 +108,6 @@
                 </div> 
         </div>
       </div>
-
-  
       
 
 </ion-content>

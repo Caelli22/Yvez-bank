@@ -16,6 +16,11 @@ export class MainPage implements OnInit {
     this.router.navigate(['/transfer']);
   }
 
+  redirectToQrPage() {
+    // Assuming 'transfer' is the route for the transfer page
+    this.router.navigate(['/qr']);
+  }
+
 
   ngOnInit() {
   }

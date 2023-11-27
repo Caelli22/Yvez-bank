@@ -1,0 +1,303 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <div>
+          <ion-img
+            src="../../assets/right-arrow 2.png"
+            id="backButton"
+            (click)="backButton()"
+          ></ion-img>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="logoContainer">
+          <ion-img src="../../assets/Logo + Name.png" id="logo"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div [ngSwitch]="counter">
+      <div *ngIf="counter == 1">
+        <ion-row>
+          <ion-col class="progBarContainer" style="--width: 1">
+            <div class="progressBar"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="reg1Label">
+              Are you a filipino
+              <p>citizen?</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <div class="ynbuttonContainer">
+          <ion-row>
+            <ion-col size="6">
+              <ion-button
+                class="ynButton"
+                name="yes"
+                value="Y"
+                (click)="nextPage()"
+                >Yes</ion-button
+              >
+            </ion-col>
+            <ion-col size="6">
+              <ion-button
+                class="ynButton"
+                name="no"
+                value="N"
+                (click)="nextPage()"
+                >No</ion-button
+              >
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div *ngIf="counter == 2">
+        <div>
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 2">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg1Label">
+                Are you a US Citizen or a
+                <p>green card holder?</p>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div class="ynbuttonContainer">
+            <ion-row>
+              <ion-col size="6">
+                <ion-button
+                  class="ynButton"
+                  name="yes"
+                  value="Y"
+                  (click)="cardClick()"
+                  >Yes</ion-button
+                >
+              </ion-col>
+              <ion-col size="6">
+                <ion-button
+                  class="ynButton"
+                  name="no"
+                  value="N"
+                  (click)="cardClick()"
+                  >No</ion-button
+                >
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="{{popup}}">
+            <div id="popup" class="show">
+              <div class="cardHeader">
+                <ion-grid>
+                  <ion-row>
+                    <div>
+                      To continue, accept the Terms and Conditions below
+                    </div>
+                  </ion-row>
+                  <ion-row>
+                    <ion-checkbox
+                      labelPlacement="end"
+                      class="cbLabel"
+                      name="checkbox"
+                      (click)="checked()"
+                      (click)="activateButton()"
+                    >
+                      <div>
+                        I have read and I accept both the
+                        <span style="color: #a889ff">
+                          YvezBank and Boss <br />
+                          Yvez Rewards Terms and Conditions </span
+                        >, and hereby <br />
+                        authorize YvezBank to share my personal data to Boss
+                        <br />
+                        Yvez Rewards for the purpose of updating my account
+                        <br />
+                        information.
+                      </div>
+                    </ion-checkbox>
+                  </ion-row>
+                  <ion-row>
+                    <ion-checkbox
+                      labelPlacement="end"
+                      class="cbLabel"
+                      name="checkbox2"
+                      (click)="checked()"
+                      (click)="activateButton()"
+                    >
+                      <div>
+                        I want news and updates on exclusive offers, promos,
+                        <br />
+                        and discounts from YvezBank.
+                      </div>
+                    </ion-checkbox>
+                  </ion-row>
+                  <ion-row>
+                    <ion-button
+                      class="contButton"
+                      disabled="{{checkboxButton}}"
+                      (click)="nextPage()"
+                      >Continue</ion-button
+                    >
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </div>
+            <div class="mask" (click)="cardHide()"></div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="counter == 3">
+        <ion-row>
+          <ion-col class="progBarContainer" style="--width: 3">
+            <div class="progressBar"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="reg2Label">Enter your mobile number</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div class="mobileLabel">Mobile number</div>
+        </ion-row>
+        <ion-row>
+          <ion-input fill="outline" class="input" type="number">
+            <div slot="label" class="inputNo">
+              <ion-img src="../../assets/philippine 1.png" id="flag"></ion-img
+              >(+63)
+            </div>
+          </ion-input>
+          <hr class="hr" />
+        </ion-row>
+        <ion-row class="nextBContainer">
+          <ion-button class="nextButton" (click)="nextPage()"
+            >Verify with OTP</ion-button
+          >
+        </ion-row>
+      </div>
+      <div *ngIf="counter == 4">
+        <ion-row>
+          <ion-col class="progBarContainer" style="--width: 4">
+            <div class="progressBar"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="reg2Label">Enter the OTP</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div class="otpSub">sent to +639208342568 (Ref. code XXXX)</div>
+        </ion-row>
+        <ion-row>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">1</div>
+            <hr class="hr2" />
+          </ion-col>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">2</div>
+            <hr class="hr2" />
+          </ion-col>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">3</div>
+            <hr class="hr2" />
+          </ion-col>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">4</div>
+            <hr class="hr2" />
+          </ion-col>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">5</div>
+            <hr class="hr2" />
+          </ion-col>
+          <ion-col class="otpContainer">
+            <div class="otpNumber">6</div>
+            <hr class="hr2" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div class="otpSub2">You can get a new OTP in 30s</div>
+        </ion-row>
+        <ion-row>
+          <div class="nextBContainer2">
+            <ion-button class="nextButton" (click)="nextPage()"
+              >Verify with OTP</ion-button
+            >
+          </div>
+        </ion-row>
+      </div>
+      <div *ngIf="counter == 5">
+        <ion-row>
+          <ion-col class="progBarContainer" style="--width: 5">
+            <div class="progressBar"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="reg2Label">Enter Email address</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="emailContainer">
+            <div class="placeholder">Email Address</div>
+            <hr class="hr" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div class="nextBContainer2">
+            <ion-button class="nextButton2" (click)="nextPage()">
+              Next
+            </ion-button>
+          </div>
+        </ion-row>
+      </div>
+      <!-- testing, ilagay button sa bottom ng screen, dapat responsive-->
+      <div
+        *ngIf="counter == 6"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 100vh;
+          overflow-y: hidden;
+        "
+      >
+        <div style="margin-bottom: auto">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 5">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">Enter Email address</div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder">Email Address</div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer2">
+              <ion-button class="nextButton2" (click)="nextPage()">
+                Next
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

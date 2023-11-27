@@ -53,35 +53,45 @@
 
 // Yvez Button
 
-.btn-option-container{
+.btn-1{
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 0px 20px 0px 10px;
+}
+.btn-2{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.btn-option-container{
+    width: 100%;
+    display: flex;
 }
 .yvez-btn{
     --background: rgb(64,64,64);
-    font-family: futura;
-    width: 168px;
     height: 74px;
+    width: 100%;
     flex-shrink: 0;
+    font-family: futura;
 }
 .yvez-logo{
     position: relative;
+    right: 10px;
     height: 48px;
     width: 34px;
 }
 #txt-yvez{
-    position: relative;
+    position: absolute;
     font-size: 24px;
     padding-bottom: 20px;
-    padding-left: 10px;
+    padding-left: 30px;
     font-weight: bold;
 }
 #txt-bank{
     padding-top: 20px;
+    padding-left: 8px;
     font-weight: bold;
 }
 
@@ -89,10 +99,10 @@
 
 .other-bank-btn{
     --background: rgb(64,64,64);
-    font-family: futura;
-    width: 168px;
     height: 74px;
     flex-shrink: 0;
+    font-family: futura;
+    width: 100%;
 }
 .other_bank_logo{
     position: relative;
@@ -102,6 +112,12 @@
 #txt-other-bank{
     position: relative;
     padding-left: 10px;
+    color: #FFF;
+    font-family: futura;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 // Send & Invite Button
@@ -109,7 +125,8 @@
 .send-inv-card{
     --background: rgb(64,64,64);
     font-family: futura;
-    height: 78px;
+    height: 80px;
+    flex-shrink: 0;
 }
 .txt-invite{
     position: relative;
@@ -252,17 +269,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    top: 20px;
+    display: inline-block;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: no-wrap;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; 
+    -o-text-overflow: ellipsis;
+    max-width: 80%;
+    float: left;
 }
 
 .name-container{
     position: relative;
+    left: 8px;
     bottom: 30px;
     flex-shrink: 0;
 }

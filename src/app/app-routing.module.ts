@@ -23,14 +23,18 @@ const routes: Routes = [
       import('./transfer/transfer.module').then((m) => m.TransferPageModule),
   },
   {
-    path: 'register',
-    loadChildren: () =>
-      import('./register/register.module').then((m) => m.RegisterPageModule),
-  },
-  {
     path: 'main',
     loadChildren: () =>
       import('./main/main.module').then((m) => m.MainPageModule),
+  },
+  {
+    path: 'qr',
+    loadChildren: () => import('./qr/qr.module').then((m) => m.QrPageModule),
+  },
+  {
+    path: 'register',
+    loadChildren: () =>
+      import('./register/register.module').then((m) => m.RegisterPageModule),
   },
 ];
 

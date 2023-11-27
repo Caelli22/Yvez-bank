@@ -10,7 +10,7 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {}
   // public counter: number = 1; original  value
-  public counter: number = 6;
+  public counter: number = 1;
   public popup: any = 'popupCard';
   public checkboxButton: any = true;
   public cbCounter: number = 0;

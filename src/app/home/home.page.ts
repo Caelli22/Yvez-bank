@@ -12,9 +12,8 @@ export class HomePage {
 
   ionViewDidEnter() {
     setTimeout(() => {
-      this.router.navigate(['/main']); // replace 'main' with the actual route you want to navigate to
+      this.router.navigate(['/register']); // replace 'main' with the actual route you want to navigate to
     }, 3000); // 3000 milliseconds (3 seconds), adjust as needed
   }
-
 
 }

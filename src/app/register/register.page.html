@@ -227,9 +227,9 @@
           <div class="otpSub2">You can get a new OTP in 30s</div>
         </ion-row>
         <ion-row>
-          <div class="nextBContainer2">
+          <div class="nextBContainer">
             <ion-button class="nextButton" (click)="nextPage()"
-              >Verify with OTP</ion-button
+              >Next</ion-button
             >
           </div>
         </ion-row>
@@ -252,51 +252,56 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <div class="nextBContainer2">
-            <ion-button class="nextButton2" (click)="nextPage()">
+          <div class="nextBContainer">
+            <ion-button class="nextButton" (click)="nextPage()">
               Next
             </ion-button>
           </div>
         </ion-row>
       </div>
-      <!-- testing, ilagay button sa bottom ng screen, dapat responsive-->
-      <div
-        *ngIf="counter == 6"
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          height: 100vh;
-          overflow-y: hidden;
-        "
-      >
-        <div style="margin-bottom: auto">
-          <ion-row>
-            <ion-col class="progBarContainer" style="--width: 5">
-              <div class="progressBar"></div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <div class="reg2Label">Enter Email address</div>
-            </ion-col>
-          </ion-row>
-        </div>
-        <div>
-          <ion-row>
-            <ion-col class="emailContainer">
-              <div class="placeholder">Email Address</div>
-              <hr class="hr" />
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <div class="nextBContainer2">
-              <ion-button class="nextButton2" (click)="nextPage()">
-                Next
-              </ion-button>
+      <div *ngIf="counter == 6">
+        <ion-row>
+          <ion-col class="progBarContainer" style="--width: 6">
+            <div class="progressBar"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="reg2Label">Time to take a selfie!</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="selfieCont">
+              <ion-img src="../../assets/camera 1.png" class="selfie"></ion-img>
             </div>
-          </ion-row>
-        </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="selfieCont">
+          <div class="selfieLb1">Find some good lighting!</div>
+          <div class="selfieLb2">
+            Position yourself where your face is evenly lit and there is no
+            camera glare.
+          </div>
+        </ion-row>
+        <ion-row>
+          <div class="nextBContainer">
+            <ion-button class="selfieButton" (click)="nextPage()">
+              Take a Selfie
+            </ion-button>
+          </div>
+        </ion-row>
+        <ion-row>
+          <div class="labelCont">
+            <div>
+              <ion-img src="../../assets/lock 1.png" class="lock"></ion-img>
+            </div>
+            <div class="selfieLb3">
+              This is purely for verification purposes, your data is protected
+              by high-end security at all times.
+            </div>
+          </div>
+        </ion-row>
       </div>
     </div>
   </ion-grid>

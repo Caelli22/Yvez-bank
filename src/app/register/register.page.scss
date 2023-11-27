@@ -36,7 +36,7 @@ ion-content {
   align-items: center;
   background-color: #c597f2;
   height: 10px;
-  width: calc(var(--width) * 7.1%);
+  width: calc(var(--width) * 7.69%);
   max-width: 100%;
   position: absolute;
   border-radius: 3px;
@@ -169,7 +169,6 @@ ion-checkbox::part(container) {
   font-family: "Gidugu";
   color: #404040;
   //width: 297px;
-  margin-top: 45px;
   margin-left: 13px;
 }
 
@@ -214,6 +213,9 @@ ion-checkbox::part(container) {
   --color-activated: #404040;
   color: #404040;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-seri;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 35px;
 }
 
 .nextBContainer {
@@ -221,7 +223,6 @@ ion-checkbox::part(container) {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  margin-top: 444px;
 }
 
 .hr2 {
@@ -238,20 +239,14 @@ ion-checkbox::part(container) {
   margin-top: -28px;
 }
 
-.nextBContainer2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5px;
-  width: 100%;
-}
-
 .otpSub2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 12px;
   color: #404040;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 95px;
   margin-left: 19px;
-  margin-top: 390px;
 }
 
 .otpContainer {
@@ -278,4 +273,61 @@ ion-checkbox::part(container) {
   flex-direction: column;
   align-items: center;
   margin-top: 56px;
+}
+
+.selfie {
+  width: 216px;
+  height: 216px;
+}
+
+.selfieCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selfieLb1 {
+  font-family: "Gidugu";
+  font-size: 40px;
+  color: #404040;
+  text-align: center;
+}
+
+.selfieLb2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  color: #404040;
+  text-align: center;
+  margin: 20px;
+  margin-top: -20px;
+}
+
+.selfieButton {
+  width: 349px;
+  height: 54px;
+  --border-radius: 51px;
+  --background: #a889ff;
+  --background-activated: #d1bfed;
+  --color-activated: #404040;
+  color: #404040;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-seri;
+}
+
+.lock {
+  width: 23px;
+  height: 23px;
+}
+
+.labelCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+
+.selfieLb3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  color: #404040;
+  text-align: center;
 }

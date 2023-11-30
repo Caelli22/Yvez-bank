@@ -27,7 +27,7 @@
                 </ion-col>
               <ion-col size="6">
                     <div class="btn-2">
-                        <ion-button class="other-bank-btn">
+                        <ion-button class="other-bank-btn" (click)="toggleClickedItem()"   [ngClass]="{'itemClass': (this.itemClicked)}">
                             <ion-img class="other_bank_logo" src="../../assets/transfer-icons/yvez_btn/bank_logo.png"></ion-img>
                         <p id="txt-other-bank">Other Banks</p>
                         </ion-button>
@@ -72,39 +72,65 @@
 
                 <div class="save-profile">
 
-                    <div class="prof-container" *ngFor="let prof of profile">
-
-                        <div class="initials-placement">
-                            <h1 id="initials">{{prof.initials}}</h1>
-                            <img class="img-circol" src="../../assets/transfer-icons/circol.png" alt="circol">  
-                        </div>
-
-                        <div class="slot-container">
-                            
-                            <ion-grid fixed>
-                                <ion-row>
-                                    <ion-col class="name-container" size="6"><h1 id="save-name">{{prof.name}}</h1></ion-col>
-                                    <ion-col class="date-container" size="6"><h1 id="save-date">{{prof.date}}</h1></ion-col>
-                                </ion-row>
-                                <ion-row>
-                                    <ion-col size="12" class="bank-container" ><h1 id="save-bank">{{prof.paymethod}}</h1></ion-col>
-                                </ion-row>
-                            </ion-grid>
-    
-                            <!-- <div class="name-container">
-                                <h1 id="save-name">{{prof.name}}</h1>
-                            </div>
-                            
-                            <div class="date-container">
-                                <h1 id="save-date">{{prof.date}}asfasfsa</h1>
-                            </div>
-
-                            <div class="bank-container">
-                                <h1 id="save-bank">{{prof.paymethod}}</h1>
-                            </div> -->
-
-                        </div>
+                    <div class="bank-li" *ngIf = "itemClicked">
+                            <ion-list class="item">
+                              <ion-item class="item-content">
+                                <ion-label>Robinsons Bank Corporation</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Banco De Oro Unibank, Inc (BDO)</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Bank of the Philippine Islands (BPI)</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>G-Xchange Inc. (G-Cash)</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Union Bank of The Philippines</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Luzon Development Bank</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Paymongo Payments, Inc.</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Banana Fintech / BananaPay</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Own Bank - Rural Bank of Cavite City Inc.</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Infoserve/Nationlinx</ion-label>
+                              </ion-item>
+                              <ion-item class="item-content">
+                                <ion-label>Banco Ni Jodes (BNJ)</ion-label>
+                              </ion-item>
+                            </ion-list>
                     </div>
+
+                        <div class="prof-container" *ngFor="let prof of profile">
+
+                            <div class="initials-placement">
+                                <h1 id="initials">{{prof.initials}}</h1>
+                                <img class="img-circol" src="../../assets/transfer-icons/circol.png" alt="circol">  
+                            </div>
+    
+                            <div class="slot-container">
+                                
+                                <ion-grid fixed>
+                                    <ion-row>
+                                        <ion-col class="name-container" size="6"><h1 id="save-name">{{prof.name}}</h1></ion-col>
+                                        <ion-col class="date-container" size="6"><h1 id="save-date">{{prof.date}}</h1></ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col size="12" class="bank-container" ><h1 id="save-bank">{{prof.paymethod}}</h1></ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </div>
+                        </div> 
+
                 </div> 
         </div>
       </div>

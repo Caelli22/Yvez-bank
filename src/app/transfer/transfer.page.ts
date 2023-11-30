@@ -34,6 +34,19 @@ export class TransferPage implements OnInit {
     date: "Nov 08, 2023"}
   ];
 
+  itemClicked: boolean = false;
+
+  toggleClickedItem() {
+
+   this.itemClicked = !this.itemClicked;
+   console.log(this.itemClicked)
+
+  } 
+
+  public onOther(){
+  
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -318,3 +318,31 @@
     bottom: 70px;
     left: 8px;
 }
+
+// Other Banks List
+.bank-li{
+    width: 100%;
+}
+
+.item-content {   
+--ion-item-background: #fffefe;
+color: #1E1E1E;
+font-family: Gill Sans MT;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.li-banks{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+// Functions
+
+.itemClass{
+    --background: #3880ff;
+}

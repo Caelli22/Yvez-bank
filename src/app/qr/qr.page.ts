@@ -11,7 +11,6 @@ export class QrPage implements OnInit {
   constructor(private router: Router) { }
 
   backToMain() {
-    // Replace 'next-page' with the actual route path of your next page
     this.router.navigate(['/main']);
   }
 

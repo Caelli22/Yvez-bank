@@ -1,0 +1,51 @@
+@font-face {
+    font-family: futura;
+    src: url(../../assets/font/FuturaLT.woff);
+}
+ion-content {
+    --background: #E6DFF1;  
+  }
+
+.img{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin: 30px;
+}
+
+swipe-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+ion-img{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin: 15px;
+    margin-top: 110px;
+}
+
+#ion-button1{
+    margin-top: 16px;
+    font-family: futura;
+    color: black;
+    --background: #CEB8F2;
+}
+
+#ion-button2{
+    font-family: futura;
+    color: black;
+    --background: #E6DFF1;
+    --border-color: black;
+}
+

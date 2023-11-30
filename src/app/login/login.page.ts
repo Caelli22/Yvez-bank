@@ -9,7 +9,7 @@ export class LoginPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  
+  swiperSlideChanged(e: any) {}
 }

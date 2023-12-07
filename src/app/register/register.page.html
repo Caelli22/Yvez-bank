@@ -1,71 +1,34 @@
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="3">
-        <div>
-          <ion-img
-            src="../../assets/right-arrow 2.png"
-            id="backButton"
-            (click)="backButton()"
-          ></ion-img>
-        </div>
-      </ion-col>
-      <ion-col size="6">
-        <div class="logoContainer">
-          <ion-img src="../../assets/Logo + Name.png" id="logo"></ion-img>
-        </div>
-      </ion-col>
-    </ion-row>
-    <div [ngSwitch]="counter">
-      <div *ngIf="counter == 1">
-        <ion-row>
-          <ion-col class="progBarContainer" style="--width: 1">
-            <div class="progressBar"></div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="reg1Label">
-              Are you a filipino
-              <p>citizen?</p>
-            </div>
-          </ion-col>
-        </ion-row>
-        <div class="ynbuttonContainer">
+  <form #myForm="ngForm" (ngSubmit)="inputData(myForm.value)">
+    <ion-grid>
+      <ion-row class="{{hideLogo}}">
+        <ion-col size="3">
+          <div>
+            <ion-img
+              src="../../assets/right-arrow 2.png"
+              id="backButton"
+              (click)="backButton()"
+            ></ion-img>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="logoContainer">
+            <ion-img src="../../assets/Logo + Name.png" id="logo"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+      <div [ngSwitch]="counter">
+        <div *ngIf="counter == 1">
           <ion-row>
-            <ion-col size="6">
-              <ion-button
-                class="ynButton"
-                name="yes"
-                value="Y"
-                (click)="nextPage()"
-                >Yes</ion-button
-              >
-            </ion-col>
-            <ion-col size="6">
-              <ion-button
-                class="ynButton"
-                name="no"
-                value="N"
-                (click)="nextPage()"
-                >No</ion-button
-              >
-            </ion-col>
-          </ion-row>
-        </div>
-      </div>
-      <div *ngIf="counter == 2">
-        <div>
-          <ion-row>
-            <ion-col class="progBarContainer" style="--width: 2">
+            <ion-col class="progBarContainer" style="--width: 1">
               <div class="progressBar"></div>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
               <div class="reg1Label">
-                Are you a US Citizen or a
-                <p>green card holder?</p>
+                Are you a filipino
+                <p>citizen?</p>
               </div>
             </ion-col>
           </ion-row>
@@ -76,7 +39,7 @@
                   class="ynButton"
                   name="yes"
                   value="Y"
-                  (click)="cardClick()"
+                  (click)="nextPage()"
                   >Yes</ion-button
                 >
               </ion-col>
@@ -85,224 +48,869 @@
                   class="ynButton"
                   name="no"
                   value="N"
-                  (click)="cardClick()"
+                  (click)="nextPage()"
                   >No</ion-button
                 >
               </ion-col>
             </ion-row>
           </div>
         </div>
-        <div class="cardContainer">
-          <div class="{{popup}}">
-            <div id="popup" class="show">
-              <div class="cardHeader">
+        <div *ngIf="counter == 2">
+          <div>
+            <ion-row>
+              <ion-col class="progBarContainer" style="--width: 2">
+                <div class="progressBar"></div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="reg1Label">
+                  Are you a US Citizen or a
+                  <p>green card holder?</p>
+                </div>
+              </ion-col>
+            </ion-row>
+            <div class="ynbuttonContainer">
+              <ion-row>
+                <ion-col size="6">
+                  <ion-button
+                    class="ynButton"
+                    name="yes"
+                    value="Y"
+                    (click)="cardClick()"
+                    >Yes</ion-button
+                  >
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button
+                    class="ynButton"
+                    name="no"
+                    value="N"
+                    (click)="cardClick()"
+                    >No</ion-button
+                  >
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="{{popup}}">
+              <div id="popup" class="show">
+                <div class="cardHeader">
+                  <ion-grid>
+                    <ion-row>
+                      <div>
+                        To continue, accept the Terms and Conditions below
+                      </div>
+                    </ion-row>
+                    <ion-row>
+                      <ion-checkbox
+                        labelPlacement="end"
+                        class="cbLabel"
+                        name="checkbox"
+                        (click)="checked()"
+                        (click)="activateButton()"
+                      >
+                        <div>
+                          I have read and I accept both the
+                          <span style="color: #a889ff">
+                            YvezBank and Boss <br />
+                            Yvez Rewards Terms and Conditions </span
+                          >, and hereby <br />
+                          authorize YvezBank to share my personal data to Boss
+                          <br />
+                          Yvez Rewards for the purpose of updating my account
+                          <br />
+                          information.
+                        </div>
+                      </ion-checkbox>
+                    </ion-row>
+                    <ion-row>
+                      <ion-checkbox
+                        labelPlacement="end"
+                        class="cbLabel"
+                        name="checkbox2"
+                        (click)="checked()"
+                        (click)="activateButton()"
+                      >
+                        <div>
+                          I want news and updates on exclusive offers, promos,
+                          <br />
+                          and discounts from YvezBank.
+                        </div>
+                      </ion-checkbox>
+                    </ion-row>
+                    <ion-row>
+                      <ion-button
+                        class="contButton"
+                        disabled="{{checkboxButton}}"
+                        (click)="nextPage()"
+                        >Continue</ion-button
+                      >
+                    </ion-row>
+                  </ion-grid>
+                </div>
+              </div>
+              <div class="mask" (click)="cardHide()"></div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="counter == 3">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 3">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">Enter your mobile number</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="mobileLabel">Mobile number</div>
+          </ion-row>
+          <ion-row>
+            <ion-input
+              id="contact_number"
+              fill="outline"
+              class="input"
+              type="number"
+              name="contact_number"
+              ngModel
+            >
+              <div slot="label" class="inputNo">
+                <ion-img src="../../assets/philippine 1.png" id="flag"></ion-img
+                >(+63)
+              </div>
+            </ion-input>
+            <hr class="hr" />
+          </ion-row>
+          <ion-row class="nextBContainer">
+            <ion-button class="nextButton" type="submit"
+              >Verify with OTP</ion-button
+            >
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 4">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 4">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">Enter the OTP</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="otpSub">sent to +639208342568 (Ref. code XXXX)</div>
+          </ion-row>
+          <ion-row>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">1</div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">2</div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">3</div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">4</div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">5</div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">6</div>
+              <hr class="hr2" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="otpSub2">You can get a new OTP in 30s</div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton" (click)="nextPage()"
+                >Next</ion-button
+              >
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 5">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 5">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">Enter Email address</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder">Email Address</div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton" (click)="nextPage()">
+                Next
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 6">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 6">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">Time to take a selfie!</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="selfieCont">
+                <ion-img
+                  src="../../assets/camera 1.png"
+                  class="selfie"
+                ></ion-img>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="selfieCont">
+            <div class="selfieLb1">Find some good lighting!</div>
+            <div class="selfieLb2">
+              Position yourself where your face is evenly lit and there is no
+              camera glare.
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="selfieButton" (click)="nextPage()">
+                Take a Selfie
+              </ion-button>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="labelCont">
+              <div>
+                <ion-img src="../../assets/lock 1.png" class="lock"></ion-img>
+              </div>
+              <div class="selfieLb3">
+                This is purely for verification purposes, your data is protected
+                by high-end security at all times.
+              </div>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 7">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 7">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="reg2Label">ID Verification!</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="selfieCont">
+                <ion-img src="../../assets/id 1.png" class="selfie"></ion-img>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="selfieCont">
+            <div class="selfieLb1">Show us your whole ID</div>
+            <div class="selfieLb2">
+              Make sure the whole ID fits in the frame with no part of it
+              covered.
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="selfieButton" (click)="cardClick()">
+                Scan ID
+              </ion-button>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="labelCont">
+              <div>
+                <ion-img src="../../assets/lock 1.png" class="lock"></ion-img>
+              </div>
+              <div class="selfieLb3">
+                This is purely for verification purposes, your data is protected
+                by high-end security at all times.
+              </div>
+            </div>
+          </ion-row>
+          <div class="cardContainer2">
+            <div class="{{popup}}">
+              <div id="popup2" class="show">
                 <ion-grid>
-                  <ion-row>
-                    <div>
-                      To continue, accept the Terms and Conditions below
-                    </div>
+                  <ion-row class="reg2Label">
+                    <div class="margin">Select your ID type</div>
                   </ion-row>
-                  <ion-row>
-                    <ion-checkbox
-                      labelPlacement="end"
-                      class="cbLabel"
-                      name="checkbox"
-                      (click)="checked()"
-                      (click)="activateButton()"
-                    >
-                      <div>
-                        I have read and I accept both the
-                        <span style="color: #a889ff">
-                          YvezBank and Boss <br />
-                          Yvez Rewards Terms and Conditions </span
-                        >, and hereby <br />
-                        authorize YvezBank to share my personal data to Boss
-                        <br />
-                        Yvez Rewards for the purpose of updating my account
-                        <br />
-                        information.
-                      </div>
-                    </ion-checkbox>
+                  <ion-row class="card2SubLabel">
+                    <div>Prefered IDs</div>
                   </ion-row>
-                  <ion-row>
-                    <ion-checkbox
-                      labelPlacement="end"
-                      class="cbLabel"
-                      name="checkbox2"
-                      (click)="checked()"
-                      (click)="activateButton()"
-                    >
-                      <div>
-                        I want news and updates on exclusive offers, promos,
-                        <br />
-                        and discounts from YvezBank.
-                      </div>
-                    </ion-checkbox>
-                  </ion-row>
-                  <ion-row>
-                    <ion-button
-                      class="contButton"
-                      disabled="{{checkboxButton}}"
+                  <ion-row class="idList">
+                    <ion-list
+                      lines="inset"
                       (click)="nextPage()"
-                      >Continue</ion-button
+                      (click)="autoNext()"
                     >
+                      <ion-item> Driver's License </ion-item>
+                      <ion-item> Unified Multipurpose ID (UMID)</ion-item>
+                      <ion-item> Postal ID </ion-item>
+                      <ion-item> Voter’s ID</ion-item>
+                      <ion-item> Philippine Passport </ion-item>
+                      <ion-item> Philippine National ID (PhilSys)</ion-item>
+                      <ion-item
+                        >Professional Regulation Commission (PRC)
+                      </ion-item>
+                      <ion-item> Social Security System (SSS)</ion-item>
+                    </ion-list>
                   </ion-row>
                 </ion-grid>
               </div>
+              <div class="mask" (click)="cardHide()"></div>
             </div>
-            <div class="mask" (click)="cardHide()"></div>
           </div>
         </div>
-      </div>
-      <div *ngIf="counter == 3">
-        <ion-row>
-          <ion-col class="progBarContainer" style="--width: 3">
-            <div class="progressBar"></div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="reg2Label">Enter your mobile number</div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <div class="mobileLabel">Mobile number</div>
-        </ion-row>
-        <ion-row>
-          <ion-input fill="outline" class="input" type="number">
-            <div slot="label" class="inputNo">
-              <ion-img src="../../assets/philippine 1.png" id="flag"></ion-img
-              >(+63)
+        <div *ngIf="counter == 8">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 8">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="selfieCont">
+                <ion-img
+                  src="../../assets/check-mark 1.png"
+                  class="selfie"
+                ></ion-img>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="selfieCont">
+            <div class="selfieLb1">
+              ID Uploaded!
+              <br />
+              Just a few steps to go!
             </div>
-          </ion-input>
-          <hr class="hr" />
-        </ion-row>
-        <ion-row class="nextBContainer">
-          <ion-button class="nextButton" (click)="nextPage()"
-            >Verify with OTP</ion-button
-          >
-        </ion-row>
-      </div>
-      <div *ngIf="counter == 4">
-        <ion-row>
-          <ion-col class="progBarContainer" style="--width: 4">
-            <div class="progressBar"></div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="reg2Label">Enter the OTP</div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <div class="otpSub">sent to +639208342568 (Ref. code XXXX)</div>
-        </ion-row>
-        <ion-row>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">1</div>
-            <hr class="hr2" />
-          </ion-col>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">2</div>
-            <hr class="hr2" />
-          </ion-col>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">3</div>
-            <hr class="hr2" />
-          </ion-col>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">4</div>
-            <hr class="hr2" />
-          </ion-col>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">5</div>
-            <hr class="hr2" />
-          </ion-col>
-          <ion-col class="otpContainer">
-            <div class="otpNumber">6</div>
-            <hr class="hr2" />
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <div class="otpSub2">You can get a new OTP in 30s</div>
-        </ion-row>
-        <ion-row>
-          <div class="nextBContainer">
-            <ion-button class="nextButton" (click)="nextPage()"
-              >Next</ion-button
-            >
-          </div>
-        </ion-row>
-      </div>
-      <div *ngIf="counter == 5">
-        <ion-row>
-          <ion-col class="progBarContainer" style="--width: 5">
-            <div class="progressBar"></div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="reg2Label">Enter Email address</div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="emailContainer">
-            <div class="placeholder">Email Address</div>
-            <hr class="hr" />
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <div class="nextBContainer">
-            <ion-button class="nextButton" (click)="nextPage()">
-              Next
-            </ion-button>
-          </div>
-        </ion-row>
-      </div>
-      <div *ngIf="counter == 6">
-        <ion-row>
-          <ion-col class="progBarContainer" style="--width: 6">
-            <div class="progressBar"></div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="reg2Label">Time to take a selfie!</div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div class="selfieCont">
-              <ion-img src="../../assets/camera 1.png" class="selfie"></ion-img>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 9">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 9">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="reg2Label">Are these details correct?</div>
+          </ion-row>
+          <ion-row>
+            <div class="detailsMargin">
+              <div class="detailsPH">ID Number</div>
+              <div class="details">010101010</div>
             </div>
-          </ion-col>
-        </ion-row>
-        <ion-row class="selfieCont">
-          <div class="selfieLb1">Find some good lighting!</div>
-          <div class="selfieLb2">
-            Position yourself where your face is evenly lit and there is no
-            camera glare.
-          </div>
-        </ion-row>
-        <ion-row>
-          <div class="nextBContainer">
-            <ion-button class="selfieButton" (click)="nextPage()">
-              Take a Selfie
-            </ion-button>
-          </div>
-        </ion-row>
-        <ion-row>
-          <div class="labelCont">
-            <div>
-              <ion-img src="../../assets/lock 1.png" class="lock"></ion-img>
+          </ion-row>
+          <ion-row>
+            <div class="detailsMargin">
+              <div class="detailsPH">First Name</div>
+              <div class="details">Elijah Joshua</div>
             </div>
-            <div class="selfieLb3">
-              This is purely for verification purposes, your data is protected
-              by high-end security at all times.
+          </ion-row>
+          <ion-row>
+            <div class="detailsMargin">
+              <div class="detailsPH">Middle Name</div>
+              <div class="details">Mabaho</div>
             </div>
-          </div>
-        </ion-row>
+          </ion-row>
+          <ion-row>
+            <div class="detailsMargin">
+              <div class="detailsPH">Last Name</div>
+              <div class="details">Dimaculangan</div>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="detailsMargin">
+              <div class="detailsPH">Date of Birth</div>
+              <div class="details">11/05/2002</div>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton confirmation" (click)="nextPage()">
+                Yes, that's me
+              </ion-button>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton notQuite" disabled="true">
+                That's not quite right
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 10">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 10">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="reg2Label">Enter your home address</div>
+            <div class="details subLabel">
+              Make sure you give us the correct info.
+            </div>
+          </ion-row>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder placeholder2">Country of residence</div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder placeholder2">
+                House/Building No. and Street Number
+              </div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder placeholder2">
+                Municipality and Province
+              </div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="emailContainer">
+              <div class="placeholder placeholder2">Barangay</div>
+              <hr class="hr" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton confirmation" (click)="nextPage()">
+                Confirm
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 11">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 11">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="reg2Label">Create your username</div>
+            <div class="details subLabel">
+              You'll use this to log in to your account.
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="usernameCont">
+              <ion-input
+                id="username"
+                placeholder="username"
+                fill="outline"
+                name="username"
+                ngModel
+              ></ion-input>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button class="nextButton confirmation" type="submit">
+                Confirm
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 12">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 12">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="lock">
+              <ion-img src="../../assets/padlock 1.png"></ion-img>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="reg2Label">Create your new PIN</div>
+            <div class="details subLabel">
+              You'll use this to log in to your account.
+            </div>
+          </ion-row>
+          <ion-row>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder1}}">1</span>
+                {{num1}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder2}}">2</span>
+                {{num2}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder3}}">3</span>
+                {{num3}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder4}}">4</span>
+                {{num4}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+          </ion-row>
+          <ion-row class="cardContainer">
+            <div class="keypadCont">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('1')"
+                      (click)="inputPin()"
+                    >
+                      1
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('2')"
+                      (click)="inputPin()"
+                    >
+                      2
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('3')"
+                      (click)="inputPin()"
+                    >
+                      3
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('4')"
+                      (click)="inputPin()"
+                    >
+                      4
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('5')"
+                      (click)="inputPin()"
+                    >
+                      5
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('6')"
+                      (click)="inputPin()"
+                    >
+                      6
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('7')"
+                      (click)="inputPin()"
+                    >
+                      7
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('8')"
+                      (click)="inputPin()"
+                    >
+                      8
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('9')"
+                      (click)="inputPin()"
+                    >
+                      9
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div></div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('0')"
+                      (click)="inputPin()"
+                    >
+                      0
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div class="numbers">
+                      <ion-img
+                        src="../../assets/delete 1.png"
+                        class="delete"
+                        (click)="deletePin()"
+                        (click)="inputPin()"
+                      ></ion-img>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button
+                class="nextButton confirmation"
+                (click)="confirmPin1()"
+              >
+                Confirm
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 13">
+          <ion-row>
+            <ion-col class="progBarContainer" style="--width: 13">
+              <div class="progressBar"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="lock">
+              <ion-img src="../../assets/padlock 1.png"></ion-img>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="reg2Label">Confirm your pin</div>
+            <div class="details subLabel">
+              You'll use this to log in to your account.
+            </div>
+          </ion-row>
+          <ion-row>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder1}}">1</span>
+                {{num1}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder2}}">2</span>
+                {{num2}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder3}}">3</span>
+                {{num3}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+            <ion-col class="otpContainer">
+              <div class="otpNumber">
+                <span class="{{numPlaceholder4}}">4</span>
+                {{num4}}
+              </div>
+              <hr class="hr2" />
+            </ion-col>
+          </ion-row>
+          <ion-row class="cardContainer">
+            <div class="keypadCont">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('1')"
+                      (click)="inputPin()"
+                    >
+                      1
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('2')"
+                      (click)="inputPin()"
+                    >
+                      2
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('3')"
+                      (click)="inputPin()"
+                    >
+                      3
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('4')"
+                      (click)="inputPin()"
+                    >
+                      4
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('5')"
+                      (click)="inputPin()"
+                    >
+                      5
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('6')"
+                      (click)="inputPin()"
+                    >
+                      6
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('7')"
+                      (click)="inputPin()"
+                    >
+                      7
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('8')"
+                      (click)="inputPin()"
+                    >
+                      8
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('9')"
+                      (click)="inputPin()"
+                    >
+                      9
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div></div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('0')"
+                      (click)="inputPin()"
+                    >
+                      0
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div class="numbers">
+                      <ion-img
+                        src="../../assets/delete 1.png"
+                        class="delete"
+                        (click)="deletePin()"
+                        (click)="inputPin()"
+                      ></ion-img>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="nextBContainer">
+              <ion-button
+                class="nextButton confirmation"
+                (click)="confirmPin2()"
+              >
+                Confirm
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
+        <div *ngIf="counter == 14">
+          <ion-img src="../../assets/Pattern22 1.png"></ion-img>
+          <ion-row>
+            <div class="lastLabel">Your account is ready</div>
+            <div class="lastSubLabel">Login now to start banking!</div>
+            <div class="nextBContainer">
+              <ion-button class="loginButton" type="submit">
+                Log in
+              </ion-button>
+            </div>
+          </ion-row>
+        </div>
       </div>
-    </div>
-  </ion-grid>
+    </ion-grid>
+  </form>
 </ion-content>

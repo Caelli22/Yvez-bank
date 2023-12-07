@@ -36,6 +36,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterPageModule),
   },
+  {
+    path: 'login-real',
+    loadChildren: () => import('./login-real/login-real.module').then( m => m.LoginRealPageModule)
+  },
 ];
 
 @NgModule({

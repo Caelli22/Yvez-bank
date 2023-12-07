@@ -1,0 +1,23 @@
+ion-content {
+  --background: url("../../assets/Pattern1\ 4.png") rgb(22, 21, 21) 50% / cover
+    no-repeat;
+}
+
+.centeringDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 169px;
+  height: 73px;
+  margin-top: 118px;
+}
+
+.label {
+  font-family: "Montserat";
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 76px;
+}

@@ -1,12 +1,247 @@
 <ion-content class="background">
   <ion-grid>
-    <ion-row class="centeringDiv">
-      <div>
-        <ion-img src="../../assets/white Logo.png" class="logo"></ion-img>
+    <div [ngSwitch]="counter">
+      <div *ngIf="counter == 1">
+        <ion-row class="centeringDiv">
+          <div>
+            <ion-img src="../../assets/white Logo.png" class="logo"></ion-img>
+          </div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="label">Good day!</div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="contact_number">
+            <div class="number">+63 9208342568</div>
+          </div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <ion-card class="pinCard" (click)="Login()">
+            <ion-img src="../../assets/pin logo.png"></ion-img>
+            <div class="cardLabel">Pin Login</div>
+          </ion-card>
+        </ion-row>
+        <div class="footer">
+          <ion-row>
+            <hr />
+          </ion-row>
+          <ion-row class="footerCont">
+            <div class="cardLabel">Help Centre</div>
+            <div class="cardLabel">Forgot Pin?</div>
+          </ion-row>
+        </div>
       </div>
-    </ion-row>
-    <ion-row class="centeringDiv">
-      <div class="label">Good day!</div>
-    </ion-row>
+      <div *ngIf="counter == 2">
+        <ion-row class="centeringDiv">
+          <div>
+            <ion-img src="../../assets/white Logo.png" class="logo2"></ion-img>
+          </div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="label">Good day!</div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="contact_number">
+            <div class="number">+63 9208342568</div>
+          </div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="pinLabel">Enter your PIN</div>
+        </ion-row>
+        <ion-row class="centeringDiv">
+          <div class="bilog">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              class="{{bilogFill1}}"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="7.75"
+                stroke="white"
+                stroke-width="0.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              class="{{bilogFill2}}"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="7.75"
+                stroke="white"
+                stroke-width="0.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              class="{{bilogFill3}}"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="7.75"
+                stroke="white"
+                stroke-width="0.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              class="{{bilogFill4}}"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="7.75"
+                stroke="white"
+                stroke-width="0.5"
+              />
+            </svg>
+          </div>
+        </ion-row>
+        <div class="keypadBackground">
+          <ion-row class="cardContainer">
+            <div class="keypadCont">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('1')"
+                      (click)="inputPin()"
+                    >
+                      1
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('2')"
+                      (click)="inputPin()"
+                    >
+                      2
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('3')"
+                      (click)="inputPin()"
+                    >
+                      3
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('4')"
+                      (click)="inputPin()"
+                    >
+                      4
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('5')"
+                      (click)="inputPin()"
+                    >
+                      5
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('6')"
+                      (click)="inputPin()"
+                    >
+                      6
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('7')"
+                      (click)="inputPin()"
+                    >
+                      7
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('8')"
+                      (click)="inputPin()"
+                    >
+                      8
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('9')"
+                      (click)="inputPin()"
+                    >
+                      9
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div></div>
+                  </ion-col>
+                  <ion-col>
+                    <div
+                      class="numbers"
+                      (click)="pinNumber('0')"
+                      (click)="inputPin()"
+                    >
+                      0
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div class="numbers">
+                      <ion-img
+                        src="../../assets/delete 1.png"
+                        class="delete"
+                        (click)="deletePin()"
+                        (click)="inputPin()"
+                      ></ion-img>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-row>
+          <div class="footer2">
+            <ion-row class="footerCont">
+              <div class="cardLabel2">Help Centre</div>
+              <div class="cardLabel2">Forgot Pin?</div>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-grid>
 </ion-content>

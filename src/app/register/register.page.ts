@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { INITIAL_BALANCE, generateUUID, save_user } from '../core/bank';
 
 @Component({
@@ -7,7 +8,7 @@ import { INITIAL_BALANCE, generateUUID, save_user } from '../core/bank';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
   // public counter: number = 1; original  value
@@ -238,5 +239,9 @@ export class RegisterPage implements OnInit {
     console.log(input);
   }
 
-  emptyChecker() {}
+  toLogin() {
+    setTimeout(() => {
+      this.router.navigate(['/login-real']);
+    }, 500);
+  }
 }

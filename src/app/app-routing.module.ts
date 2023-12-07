@@ -37,8 +37,16 @@ const routes: Routes = [
       import('./register/register.module').then((m) => m.RegisterPageModule),
   },
   {
+    path: 'deposit',
+    loadChildren: () =>
+      import('./deposit/deposit.module').then((m) => m.DepositPageModule),
+  },
+  {
     path: 'login-real',
-    loadChildren: () => import('./login-real/login-real.module').then( m => m.LoginRealPageModule)
+    loadChildren: () =>
+      import('./login-real/login-real.module').then(
+        (m) => m.LoginRealPageModule
+      ),
   },
 ];
 

@@ -11,6 +11,11 @@ export class MainPage implements OnInit {
 
   constructor(private router: Router) { }
 
+  redirectToDepositPage() {
+    // Assuming 'transfer' is the route for the transfer page
+    this.router.navigate(['/deposit']);
+  }
+
   redirectToTransferPage() {
     // Assuming 'transfer' is the route for the transfer page
     this.router.navigate(['/transfer']);

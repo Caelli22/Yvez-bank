@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { initialize_bank_database } from '../core/bank';
 
@@ -14,7 +14,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     setTimeout(() => {
-      this.router.navigate(['/register']);
+      this.router.navigate(['/login']);
     }, 3000); // 3000 milliseconds (3 seconds), adjust as needed
   }
 }

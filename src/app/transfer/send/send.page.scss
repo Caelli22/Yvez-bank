@@ -1,0 +1,51 @@
+@font-face {
+    font-family: futura;
+    src: url(../../../assets/font/FuturaLT.woff);
+}
+
+.bnk-lay{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.pos-txt-send{
+    position: relative;
+    right: 120px;
+    width: 106px;
+    flex-shrink: 0;
+}
+.txt-send{
+    color: #000;           
+    font-family: futura;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.img-arrow{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+//Background
+.pattern-circle{
+    .img-patt{
+        width: 768.977px;
+        height: 781.583px;
+        flex-shrink: 0;
+    }
+}
+
+
+.bg-color-content{
+    --ion-background-color: #E6DFF1 !important;
+}

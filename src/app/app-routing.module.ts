@@ -35,7 +35,11 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterPageModule),
+  },  {
+    path: 'deposit',
+    loadChildren: () => import('./deposit/deposit.module').then( m => m.DepositPageModule)
   },
+
 ];
 
 @NgModule({

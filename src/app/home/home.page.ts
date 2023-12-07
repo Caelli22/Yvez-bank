@@ -12,7 +12,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     setTimeout(() => {
-      this.router.navigate(['/register']); 
+      this.router.navigate(['/login']); 
     }, 3000); // 3000 milliseconds (3 seconds), adjust as needed
   }
 

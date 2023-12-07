@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: TransferPage
+  },  {
+    path: 'send',
+    loadChildren: () => import('./send/send.module').then( m => m.SendPageModule)
   }
+
 ];
 
 @NgModule({

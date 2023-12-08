@@ -3,21 +3,8 @@
     src: url(../../../assets/font/FuturaLT.woff);
 }
 
-.bnk-lay{
-    width: 100%;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    padding: 1rem;
-    flex-shrink: 0;
-}
-
 .pos-txt-send{
     position: relative;
-    right: 120px;
-    width: 106px;
     flex-shrink: 0;
 }
 .txt-send{
@@ -31,6 +18,8 @@
 
 .img-arrow{
     position: relative;
+    top: 15px;
+    left: 10px;
     width: 23px;
     height: 23px;
     flex-shrink: 0;
@@ -38,6 +27,7 @@
 
 //Background
 .pattern-circle{
+    position: absolute;
     .img-patt{
         width: 768.977px;
         height: 781.583px;
@@ -48,4 +38,158 @@
 
 .bg-color-content{
     --ion-background-color: #E6DFF1 !important;
+}
+
+//available balance
+.avail-bal{
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+}
+.av-bal-txt{
+    color: rgba(0, 0, 0, 0.75);
+    font-family: Gill Sans MT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.av-bal-txt-2{
+    color: #000;
+    font-family: Gill Sans MT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.av-line-color{
+    position: relative;
+    width: 100rem;
+    height: 12px;
+    flex-shrink: 0;
+    right: 10px;
+    background: #A889FF;
+}
+//type here bal
+
+.txt-area-bal{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    
+    .txt-area-main{
+    color: #9486AA;
+    font-family: Gill Sans MT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    left: 90px;
+    }
+}
+
+
+
+.bg-transparent {
+    background: transparent;
+    position: relative;
+    padding: 0px 40px;
+}
+
+.av-line-color-2{
+    position: relative;
+    width: 80%;
+    flex-shrink: 0;
+    bottom: 60px;
+    height: 1px;
+    left: 40px;
+    background: #404040;
+}
+
+
+.yvez-logo-bal{
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 5px;
+    height: 70px;
+
+    .logo-cont{
+        display: flex;
+        position: relative;
+        left: 35px;
+        width: 100%;
+        height: 50px;
+
+        .yvez-logo{
+            width: 20px;
+            height: 27px;
+            flex-shrink: 0;
+            position: relative;
+            left: 3px;
+        }
+        #txt-yvez{
+            color: #000;
+            font-family: Futura;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: relative;
+            bottom: 20px;
+            left: 5px;
+        }
+        #txt-bank{
+            color: #000;
+            font-family: Montserrat;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: relative;
+            right: 17px;
+        }
+    }
+    .txt-cont{
+        position: relative;
+        height: 15px;
+    }
+    .txt-cont p{
+        color: rgba(0, 0, 0, 0.75);
+        font-family: Gill Sans MT;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: relative;
+        bottom: 13px;
+    }
+    .free-pos{
+        position: relative;
+        left: 130px;
+        top: 3px;
+    }
+}
+
+.btn-next-cont{
+    width: 100%;
+    position: relative;
+    top: 200px;
+    .btn-next{
+        display: block;
+        padding: 0px 30px;
+        width: 100%;
+        height: 60px;
+        flex-shrink: 0;
+        #hehe{
+            color: #000;
+            font-family: Gill Sans MT;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
 }

@@ -1,10 +1,16 @@
   
     <ion-content class="bg-color-content">
       <!-- Top Panel -->
-      <div class="bnk-lay">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5"><img class="img-arrow" src="../../../assets/transfer-icons/send-right-arrow-2.png"></ion-col>
+          <ion-col> <div class="pos-txt-send"> <p class="txt-send">To YvezBank</p> </div></ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- <div class="bnk-lay">
         <div> <img class="img-arrow" src="../../../assets/transfer-icons/send-right-arrow-2.png"></div>
         <div class="pos-txt-send"> <p class="txt-send">To YvezBank</p> </div>
-      </div>
+      </div> -->
 
       <!--Background--> 
       <div class="pattern-circle">
@@ -12,7 +18,47 @@
       </div>
 
       <!-- Available Bal -->
+      <div class="avail-bal">
+        <ion-grid>
+          <ion-row class="av-bal-txt">
+            <ion-col size="9">Available Balance</ion-col>
+            <ion-col>Balance After</ion-col>
+          </ion-row>
+  
+          <ion-row class="av-bal-txt-2">
+            <ion-col size="9"> ₱ 5,065.00</ion-col>
+            <ion-col> ₱ 5,065.00</ion-col>
+          </ion-row>
+        </ion-grid>
+        
+        <div class="av-line-color"></div>
+      </div>
 
-      
+      <!-- type here bal -->
+      <div class="txt-area-bal">
+        <ion-list class="bg-transparent">
+          <ion-item color="none" lines="none">
+            <ion-textarea label="₱" placeholder="0.00" class="txt-area-main"></ion-textarea>
+          </ion-item>
+        </ion-list>
+        <div class="av-line-color-2"></div>
+      </div>
+
+      <div class="yvez-logo-bal">
+        <div class="logo-cont">
+          <ion-img class="yvez-logo" src="../../../assets/transfer-icons/send-yvez-bank-logo-1.png"></ion-img>
+        <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p>
+          <div class="txt-cont">
+            <p>Instant Transfer</p>
+          </div>
+          <div class="free-pos">
+            <ion-img src="../../../assets/transfer-icon/send-free.png"></ion-img>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-next-cont">
+        <ion-button class="btn-next" shape="round"><p id="hehe">Next</p></ion-button>
+      </div>
     </ion-content>
    

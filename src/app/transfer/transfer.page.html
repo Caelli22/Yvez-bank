@@ -7,7 +7,7 @@
     <!--send & transfer-->    
 
     <div class="container-trans-select">
-        <div> <img class="img-arrow" src="../../assets/transfer-icons/right-arrow.png" alt="arrow"></div>
+        <div> <img class="img-arrow" src="../../assets/transfer-icons/right-arrow.png" alt="arrow" (click)="backToMain()"></div>
         <div> <p class="txt-send">Send & Transfer</p> </div>
         <div><img class="trans-qr" src="../../assets/transfer-icons/trans-qr.png" alt="qr-code"></div>
     </div>
@@ -19,7 +19,7 @@
             <ion-row>
               <ion-col size="6">
                     <div class="btn-1">
-                        <ion-button class="yvez-btn">
+                        <ion-button class="yvez-btn" (click)="gotoSend()">
                             <ion-img class="yvez-logo" src="../../assets/transfer-icons/yvez_btn/yvez_logo.png"></ion-img>
                             <p id="txt-yvez">yvez</p><br><p id="txt-bank">bank</p>
                         </ion-button>

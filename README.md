@@ -65,13 +65,15 @@ To run Yvez Bank locally, follow these steps:
      ionic serve
 
 ## Contributors
-  - **Main Developers:**
-    - Dave Bryan Ico
-    - Elijah Joshua Dimaculangan
-    - Joshua Jay Federico
-    - Yvez Santiago
- - **UI and Frontend:**
-    - Kevin Matthew Palma  
+
+- **Main Developers:**
+  - [Dave Bryan Ico](https://www.facebook.com/kaeli.leiven)
+  - [Elijah Joshua Dimaculangan](https://www.facebook.com/storm.12162003)
+  - [Joshua Jay Federico](https://www.facebook.com/joshuajay.federico)
+  - [Yvez Santiago](https://www.facebook.com/yvez.santiago.yvez)
+
+- **UI and Frontend:**
+  - [Kevin Matthew Palma](https://www.facebook.com/kevinmatthew.lopezpalma)
 ## License
 This project is licensed under the MIT License, allowing you to use, modify, and distribute the code, provided you include the original copyright and license notice in any copy of the code or substantial portion of the software.
 

@@ -6,6 +6,7 @@
 .pos-txt-send{
     position: relative;
     flex-shrink: 0;
+    right: 10px;
 }
 .txt-send{
     color: #000;           
@@ -79,14 +80,14 @@
     width: 100%;
     
     .txt-area-main{
-    color: #9486AA;
-    font-family: Gill Sans MT;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    left: 90px;
+        color: #9486AA;
+        font-family: Gill Sans MT;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: relative;
+        padding: 0px 80px;
     }
 }
 
@@ -95,7 +96,7 @@
 .bg-transparent {
     background: transparent;
     position: relative;
-    padding: 0px 40px;
+    padding: 0px 20px;
 }
 
 .av-line-color-2{
@@ -168,7 +169,7 @@
     }
     .free-pos{
         position: relative;
-        left: 130px;
+        left: 80px;
         top: 3px;
     }
 }

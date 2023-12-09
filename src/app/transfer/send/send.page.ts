@@ -12,6 +12,10 @@ export class SendPage implements OnInit {
   backtoTrans(){
     this.router.navigate(['/transfer'])
   }
+  
+  gotoSent(){
+    this.router.navigate(['transfer/send/sent'])
+  }
 
   ngOnInit() {
   }

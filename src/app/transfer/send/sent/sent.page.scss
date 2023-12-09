@@ -1,0 +1,236 @@
+@font-face {
+    font-family: futura;
+    src: url(../../../../assets/font/FuturaLT.woff);
+}
+
+.img-patt{
+    position: absolute;
+    width: 768.977px;
+    height: 781.583px;
+    bottom: 20px;
+}
+.bg-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 20px;
+    z-index: -4;
+}
+.bg-color-content{
+    --ion-background-color: #E6DFF1 !important;
+}
+
+.pos-txt-send{
+    position: relative;
+    flex-shrink: 0;
+    right: 10px;
+}
+.txt-send{
+    color: #000;           
+    font-family: futura;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.img-arrow{
+    position: relative;
+    top: 15px;
+    left: 10px;
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+}
+.mobile{
+    position: relative;
+    left: 15px;
+    font-family: futura;
+    color: #000;
+    align-items: center;
+    padding: 0px 150px;
+    width: 100%;
+}
+.av-line-color{
+    position: relative;
+    width: 100rem;
+    height: 12px;
+    flex-shrink: 0;
+    right: 10px;
+    background: #A889FF;
+}
+
+.txt-area-bal{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    
+    .txt-area-main{
+        width: 100%;
+        position: relative;
+        left: 80px;
+        color: #BE3778;
+        font-family: Gill Sans MT;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.bg-transparent {
+    background: transparent;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.av-line-color-2{
+    position: relative;
+    width: 80%;
+    flex-shrink: 0;
+    bottom: 30px;
+    height: 1px;
+    left: 40px;
+    background: #404040;
+}
+
+.enter-acc-txt{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+     #txt-1{
+        position: relative;
+        top: 1px;
+        height: 19px;
+        position: relative;
+        left: 8px;
+        bottom: 20px;
+        color: rgba(190, 55, 120, 0.75);
+        font-family: Gill Sans MT;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;  
+    }
+    
+}
+
+.txt-area-bal-2{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    
+    .txt-area-main-2{
+        width: 100%;
+        position: relative;
+        left: 115px;
+        color: #BE3778;
+        font-family: Gill Sans MT;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.btn-next-cont{
+    width: 100%;
+    position: relative;
+    top: 200px;
+    .btn-next{
+        display: block;
+        padding: 0px 30px;
+        width: 100%;
+        height: 60px;
+        flex-shrink: 0;
+        #hehe{
+            color: #000;
+            font-family: Gill Sans MT;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+.pop-out{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 64, 64, 0.467);
+}
+.pop-in{
+    display: block;
+    position: relative;
+    width: 352px;
+    height: 361px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #FFF;
+}
+
+#pCon{
+    color: #404040;
+    text-align: center;
+    font-family: Gill Sans MT;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+}
+#pRef{
+    color: #404040;
+    justify-content: start;
+    position: relative;
+    left: 30px;
+    font-family: Gill Sans MT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+#pTrans{
+    color: #404040;
+    font-family: Gill Sans MT;
+    font-size: 16px;
+    position: relative;
+    left: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.btn-amount{
+    position: absolute;
+    top: 450px;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.btn-am{
+    width: 166px;
+    height: 18px;
+    color: #404040;
+    text-align: center;
+    font-family: Gill Sans MT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.hehe-2{
+    color: #404040;
+    text-align: center;
+    font-family: Gill Sans MT;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+}

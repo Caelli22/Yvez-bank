@@ -1,13 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>sent</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="bg-color-content">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5"><img class="img-arrow" src="../../../../assets/transfer-icons/send-right-arrow-2.png"(click)="backToSend()" ></ion-col>
+      <ion-col> <div class="pos-txt-send"> <p class="txt-send">To YvezBank</p> </div></ion-col>
+    </ion-row>
+  </ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sent</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="bg-img">
+      <img class="img-patt" src="../../../assets/transfer-icons/send-bg.png" class="img-patt">
+    </div>
+
+
+
+  <div class="avail-bal">
+    <div class="mobile">Mobile</div>
+    <div class="av-line-color"></div>
+  </div>
+
+  <div class="txt-area-bal">
+    <ion-list class="bg-transparent">
+      <ion-item color="none" lines="none">
+        <ion-textarea placeholder="Account Number" class="txt-area-main"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <div class="av-line-color-2"></div>
+    <div class="enter-acc-txt">
+      <p id="txt-1">Enter an account number to continue</p>
+    </div>
+  </div>
+
+  <div class="txt-area-bal-2">
+    <ion-list class="bg-transparent">
+      <ion-item color="none" lines="none">
+        <ion-textarea placeholder="Optional" class="txt-area-main-2"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <div class="av-line-color-2"></div>
+    <div class="enter-acc-txt">
+      <p id="txt-1">Note</p>
+    </div>
+  </div>
+  
+  <div class="btn-next-cont">
+    <ion-button class="btn-next" shape="round" (click)="toggleClickedItem()"   [ngClass]="{'itemClass': (this.itemClicked)}"><p id="hehe">Next</p></ion-button>
+  </div>
+
+<!-- *ngIf = "itemClicked" -->
+  <div class="pop-out" *ngIf = "itemClicked">
+      <div class="pop-in">
+        <p id="pCon">Press confirm to finalize the transfer</p>
+        <p id="pRef">Ref. No. {{refNo}}</p>
+        <p id="pTrans">Amount to be transferred: {{amTrans}}</p>
+        <p id="pTrans">Balance after transaction: {{amBal}}</p>
+      </div>
+
+       
+      <div class="btn-amount">
+        <ion-button class="btn-am" shape="round" (click)="toggleClickedItem()"   [ngClass]="{'itemClass': (this.itemClicked)}"><p id="hehe-2">Confirm</p></ion-button>
+      </div>
+  </div>
 </ion-content>

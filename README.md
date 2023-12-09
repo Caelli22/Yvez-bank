@@ -72,7 +72,7 @@ To run Yvez Bank locally, follow these steps:
   - [Joshua Jay Federico](https://www.facebook.com/joshuajay.federico)
   - [Yvez Santiago](https://www.facebook.com/yvez.santiago.yvez)
 
-- **UI and Frontend:**
+- **UI and UX:**
   - [Kevin Matthew Palma](https://www.facebook.com/kevinmatthew.lopezpalma)
 ## License
 This project is licensed under the MIT License, allowing you to use, modify, and distribute the code, provided you include the original copyright and license notice in any copy of the code or substantial portion of the software.

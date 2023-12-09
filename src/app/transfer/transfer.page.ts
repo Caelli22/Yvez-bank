@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-transfer',
   templateUrl: './transfer.page.html',
@@ -44,7 +46,7 @@ export class TransferPage implements OnInit {
     date: "Nov 08, 2023"}
   ];
 
-  itemClicked: boolean = false;
+  itemClicked = false;
 
   toggleClickedItem() {
 

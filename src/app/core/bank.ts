@@ -16,20 +16,34 @@ export const initialize_bank_database = () => {
     },
   ];
 
+  // const database = localStorage.getItem(BANK_DATABASE);
+  // if (!database) {
+  //   localStorage.setItem(BANK_DATABASE, encrypt(initial_data));
+  // }
   const database = localStorage.getItem(BANK_DATABASE);
   if (!database) {
-    localStorage.setItem(BANK_DATABASE, encrypt(initial_data));
+    localStorage.setItem(BANK_DATABASE, JSON.stringify(initial_data));
   }
 };
 
+// export const save_user = (user: any) => {
+//   const database = localStorage.getItem(BANK_DATABASE);
+//   if (database) {
+//     const data = decrypt(database);
+//     //console.table('Database', data);
+//     data.push(user);
+
+//     localStorage.setItem(BANK_DATABASE, encrypt(data));
+//   }
+// };
 export const save_user = (user: any) => {
   const database = localStorage.getItem(BANK_DATABASE);
   if (database) {
-    const data = decrypt(database);
+    const data = JSON.parse(database);
     //console.table('Database', data);
     data.push(user);
 
-    localStorage.setItem(BANK_DATABASE, encrypt(data));
+    localStorage.setItem(BANK_DATABASE, JSON.stringify(data));
   }
 };
 

@@ -4,6 +4,10 @@
 
 Welcome to the README file for our Yvez Bank Mobile App, a collaborative project developed by the talented team consisting of Dave Bryan Ico, Elijah Joshua Dimaculangan, Kevin Matthew Palma, Joshua Jay Federico, and Yvez Santiago. This document aims to provide an overview of our application, now named Yvez Bank, summarizing its features, functionality, and the development process.
 
+### Screenshots
+![Screenshot 1](https://github.com/Caelli22/ipt02-cs/blob/main/screenshots/1.png)
+![Screenshot 1](https://github.com/Caelli22/ipt02-cs/blob/main/screenshots/2.png)
+
 ## Table of Contents
 
 - [Introduction](#introduction)

@@ -29,29 +29,13 @@
   </ion-row>
 </ion-grid>
 
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-button
-      id="ion-button1"
-      size="Large"
-      shape="round">
-      Open an Account
-      </ion-button>
-    </ion-col>
-    <ion-col>
-      <ion-button
-      size="Large"
-      id="ion-button2"
-      fill="outline"
-      shape="round">
-      Log-in
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
 
-  
+<div class="center" (click)="redirectToRegister()"> 
+  <ion-button id="ion-button1" style = "height: 64px; width: 346px" size = "small" shape = "round">Open an Account</ion-button>
+</div>
+<div class="center" (click)="redirectToLogin()">
+  <ion-button id="ion-button2" style = "height: 61px; width: 346px; " size = "small" fill = "outline" shape = "round">Log In</ion-button>
+</div>
 
 </ion-content>
 

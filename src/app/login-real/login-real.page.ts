@@ -10,7 +10,7 @@ export class LoginRealPage implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
-  public counter: any = 2;
+  public counter: any = 1;
   public num1: string = '';
   public num2: string = '';
   public num3: string = '';

@@ -12,7 +12,7 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {}
   // public counter: number = 1; original  value
-  public counter: number = 3;
+  public counter: number = 1;
   public popup: any = 'popupCard';
   public checkboxButton: any = true;
   public cbCounter: number = 0;
@@ -201,12 +201,6 @@ export class RegisterPage implements OnInit {
     }
 
     if (this.pin1 == this.pin2) {
-      setTimeout(() => {
-        this.counter += 1;
-        this.hideLogo = 'phHide';
-        this.hideImg = '';
-      }, 300);
-
       let userInfo = localStorage.getItem('userInfo');
       if (userInfo) {
         let storeUser = { ...JSON.parse(userInfo) };
@@ -220,6 +214,25 @@ export class RegisterPage implements OnInit {
         save_user(storeUser);
         localStorage.removeItem('userInfo');
       }
+      setTimeout(() => {
+        this.counter += 1;
+        this.hideLogo = 'phHide';
+        this.hideImg = '';
+      }, 300);
+
+      // let userInfo = localStorage.getItem('userInfo');
+      // if (userInfo) {
+      //   let storeUser = { ...JSON.parse(userInfo) };
+      //   storeUser = {
+      //     ...storeUser,
+      //     pin: this.pin2,
+      //     balance: INITIAL_BALANCE,
+      //     uuid: generateUUID(),
+      //   };
+      //   console.log(storeUser);
+      //   save_user(storeUser);
+      //   localStorage.removeItem('userInfo');
+      // }
     } else {
       alert('Please input the same PIN. Try again');
       this.num1 = '';

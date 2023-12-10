@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-transfer',
@@ -6,6 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transfer.page.scss'],
 })
 export class TransferPage implements OnInit {
+
+  constructor(private router: Router) { }
+
+  backToMain() {
+    this.router.navigate(['/main']);
+  }
+
+  gotoSend(){
+    this.router.navigate(['/transfer/send']);
+  }
 
   public profile: Array<any> = [
     { name: "Elijah Joshua A. Dimaculangan",
@@ -34,7 +46,8 @@ export class TransferPage implements OnInit {
     date: "Nov 08, 2023"}
   ];
 
-  itemClicked: boolean = false;
+  
+  itemClicked = false;
 
   toggleClickedItem() {
 
@@ -46,8 +59,6 @@ export class TransferPage implements OnInit {
   public onOther(){
   
   }
-
-  constructor() { }
 
   ngOnInit() {
   }

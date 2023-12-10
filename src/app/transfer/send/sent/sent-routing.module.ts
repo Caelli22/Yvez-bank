@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SendPage } from './send.page';
+import { SentPage } from './sent.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SendPage
-  },
-  {
-    path: 'sent',
-    loadChildren: () => import('./sent/sent.module').then( m => m.SentPageModule)
+    component: SentPage
   }
 ];
 
@@ -18,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SendPageRoutingModule {}
+export class SentPageRoutingModule {}

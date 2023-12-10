@@ -46,6 +46,7 @@ export class TransferPage implements OnInit {
     date: "Nov 08, 2023"}
   ];
 
+  
   itemClicked = false;
 
   toggleClickedItem() {

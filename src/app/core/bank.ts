@@ -1,5 +1,4 @@
 import { UUID } from 'angular2-uuid';
-import * as crypto from 'crypto-js';
 
 export const INITIAL_BALANCE = 0;
 const BANK_DATABASE = 'bank_database';
@@ -51,15 +50,15 @@ export const generateUUID = () => {
   return UUID.UUID();
 };
 
-export const encrypt = (value: any) => {
-  const encrypted = crypto.AES.encrypt(
-    JSON.stringify(value),
-    CRYPTO_KEY
-  ).toString();
-  return encrypted;
-};
+// export const encrypt = (value: any) => {
+//   const encrypted = crypto.AES.encrypt(
+//     JSON.stringify(value),
+//     CRYPTO_KEY
+//   ).toString();
+//   return encrypted;
+// };
 
-export const decrypt = (encrypted: string) => {
-  const bytes = crypto.AES.decrypt(encrypted, CRYPTO_KEY);
-  return JSON.parse(bytes.toString(crypto.enc.Utf8));
-};
+// export const decrypt = (encrypted: string) => {
+//   const bytes = crypto.AES.decrypt(encrypted, CRYPTO_KEY);
+//   return JSON.parse(bytes.toString(crypto.enc.Utf8));
+// };

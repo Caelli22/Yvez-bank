@@ -51,15 +51,7 @@ export class LoginRealPage implements OnInit {
       let subNum4 = num;
       this.num4 = subNum4;
       this.numCounter += 1;
-      let stringPin = String(this.num1 + this.num2 + this.num3 + this.num4);
-      this.pin2 = stringPin;
-      if (this.pin2 === '0000') {
-        setTimeout(() => {
-          this.router.navigate(['/main']);
-        }, 500);
-      } else {
-        return;
-      }
+      return;
     }
   }
   inputPin() {
@@ -80,6 +72,7 @@ export class LoginRealPage implements OnInit {
     }
     if (this.num4 !== '') {
       this.bilogFill4 = 'bilogFill';
+      this.confirmation();
     } else {
       this.bilogFill4 = '';
     }
@@ -104,6 +97,31 @@ export class LoginRealPage implements OnInit {
       this.num1 = '';
       this.numCounter -= 1;
       return;
+    }
+  }
+
+  confirmation() {
+    this.pin2 = `${this.num1}${this.num2}${this.num3}${this.num4}`;
+    let database: any = localStorage.getItem('bank_database');
+    let data: any = JSON.parse(database);
+    let registeredPin = data[1].pin;
+    if (this.pin2 === registeredPin) {
+      setTimeout(() => {
+        this.router.navigate(['/main']);
+      }, 500);
+    } else {
+      this.pin2 = '';
+      this.numCounter = 0;
+      this.counter = 1;
+      this.num1 = '';
+      this.num2 = '';
+      this.num3 = '';
+      this.num4 = '';
+      this.bilogFill1 = '';
+      this.bilogFill2 = '';
+      this.bilogFill3 = '';
+      this.bilogFill4 = '';
+      alert('Incorrect Pin');
     }
   }
 }

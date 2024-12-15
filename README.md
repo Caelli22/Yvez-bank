@@ -19,7 +19,7 @@ Welcome to the README file for our Yvez Bank Mobile App, a collaborative project
 
 ## Introduction
 
-Yvez Bank is a mobile banking application designed to provide users with a secure and convenient banking experience on their mobile devices. The application focuses on user-friendly design, robust security measures, and efficient performance to ensure a positive and reliable banking experience.
+Yvez Bank is a simple mobile banking application project designed to provide users with a convenient banking experience on their mobile devices.
 
 ## Features
 
